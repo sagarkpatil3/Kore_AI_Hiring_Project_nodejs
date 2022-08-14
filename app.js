@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 const milkOrder = require(__root + './routes/milkOrder');
 app.use('/milkOrder', milkOrder);
 
-const port = '8003';
+const port = process.env.PORT || 3000
 app.listen(port, ()=>{
     console.log(`Server is running on port: ${port}`)
 })
